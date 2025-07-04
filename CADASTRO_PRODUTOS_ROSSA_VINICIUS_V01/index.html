@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produto - Rossa & Vinícius</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    
+    <div class="container">
+        <header class="header">
+            <h1><span class="logo-text">Rossa e Vini</span> Cadastro de Produtos</h1>
+            
+            <div class="theme-controls">
+                <button id="change-theme" class="theme-btn">
+                    <span class="theme-icon">🌓</span> Tema
+                </button>
+                <button id="change-bg" class="theme-btn">
+                    <span class="theme-icon">🖼️</span> Fundo
+                </button>
+            </div>
+        </header>
+
+        <div class="autores">
+            <div class="foto-autor">
+                <img src="1000018630.jpg" alt="Foto de Rossa e Vinícius">
+                <div class="authors-signature">
+                    <span>Rossa</span>
+                    <span>&</span>
+                    <span>Vinícius</span>
+                </div>
+            </div>
+        </div>
+
+        <form id="produto-form" class="card">
+            <div class="form-group">
+                <label for="nome">Nome do Produto:</label>
+                <input type="text" id="nome" required placeholder="Digite o nome do produto">
+            </div>
+
+            <div class="form-group">
+                <label for="preco">Preço (R$):</label>
+                <div class="price-controls">
+                    <button type="button" class="adjust-btn" data-amount="-1.00" title="Diminuir R$1.00">
+                        <span>-R$1</span>
+                    </button>
+                    <button type="button" class="adjust-btn" data-amount="-0.01" title="Diminuir R$0.01">
+                        <span>-1¢</span>
+                    </button>
+                    <input type="number" id="preco" step="0.01" required placeholder="0.00">
+                    <button type="button" class="adjust-btn" data-amount="0.01" title="Aumentar R$0.01">
+                        <span>+1¢</span>
+                    </button>
+                    <button type="button" class="adjust-btn" data-amount="1.00" title="Aumentar R$1.00">
+                        <span>+R$1</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" id="quantidade" required placeholder="Digite a quantidade" min="1">
+            </div>
+
+            <button type="submit" class="submit-btn">
+                <span class="btn-icon">➕</span> Adicionar Produto
+            </button>
+        </form>
+
+        <div class="actions-container">
+            <button id="limpar-tabela" class="danger-btn">
+                <span class="btn-icon">🗑️</span> Limpar Tabela
+            </button>
+            <h3 id="total" class="total-display">
+                <span>Total em Estoque:</span>
+                <span class="total-value">R$ 0.00</span>
+            </h3>
+        </div>
+
+        <div class="table-container card">
+            <table id="tabela-produtos">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Preço Unitário</th>
+                        <th>Qtd.</th>
+                        <th>Valor Total</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Sistema desenvolvido por Rossa e Vinícius © 2023</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

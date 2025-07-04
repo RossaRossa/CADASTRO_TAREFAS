@@ -1,0 +1,263 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+    color: #fff;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    transition: background 0.5s ease;
+}
+
+body.background-image {
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    max-width: 800px;
+    background: rgba(30, 30, 30, 0.9);
+    padding: 30px;
+    margin: 30px auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #ff3333;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 25px;
+    font-size: 2.2em;
+}
+
+.autores {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.foto-autor img {
+    max-width: 250px;
+    border-radius: 10px;
+    border: 3px solid #ff3333;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.foto-autor img:hover {
+    transform: scale(1.03);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: rgba(40, 40, 40, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    font-weight: bold;
+    color: #ff6666;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ff3333;
+    background: rgba(20, 20, 20, 0.8);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #ff0000;
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.4);
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+#produto-form button[type="submit"] {
+    background: linear-gradient(to right, #ff3333, #cc0000);
+    color: white;
+}
+
+#limpar-tabela {
+    background: linear-gradient(to right, #333, #000);
+    color: #ff3333;
+    margin-top: 15px;
+    width: 100%;
+}
+
+#limpar-tabela:hover {
+    background: linear-gradient(to right, #222, #000);
+}
+
+#total {
+    text-align: center;
+    margin: 20px 0;
+    color: #ff3333;
+    font-size: 1.3em;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 0, 0, 0.2);
+}
+
+th {
+    background: linear-gradient(to right, #ff3333, #990000);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+tr:nth-child(even) {
+    background: rgba(50, 50, 50, 0.5);
+}
+
+tr:hover {
+    background: rgba(255, 0, 0, 0.1);
+}
+
+.remove-btn {
+    background: linear-gradient(to right, #990000, #660000);
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.price-controls {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.price-controls input {
+    flex-grow: 1;
+}
+
+.adjust-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    background: linear-gradient(to right, #333, #666);
+    color: white;
+}
+
+.adjust-btn:hover {
+    background: linear-gradient(to right, #444, #777);
+}
+
+.theme-controls {
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+#change-bg {
+    background: linear-gradient(to right, #333, #000);
+    color: #ff3333;
+    padding: 8px 15px;
+    font-size: 14px;
+}
+
+/* Estilos base */
+body {
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+}
+
+/* Tema escuro (padrão) */
+body.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-theme .container {
+    background: rgba(30, 30, 30, 0.9);
+    border: 1px solid rgba(255, 0, 0, 0.2);
+}
+
+body.dark-theme input {
+    background: rgba(20, 20, 20, 0.8);
+    color: white;
+}
+
+/* Tema claro */
+body.light-theme {
+    background-color: #f5f5f5;
+    color: #333333;
+}
+
+body.light-theme .container {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(200, 0, 0, 0.2);
+}
+
+body.light-theme input {
+    background: rgba(240, 240, 240, 0.8);
+    color: #333;
+}
+
+body.light-theme .card {
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme table {
+    background-color: white;
+}
+
+body.light-theme th {
+    background: linear-gradient(to right, #ff3333, #990000);
+    color: white;
+}
+
+/* Botão de tema */
+.theme-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: inherit;
+    padding: 8px 12px;
+    margin-left: 8px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.theme-icon {
+    margin-right: 5px;
+}
